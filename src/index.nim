@@ -1,4 +1,4 @@
-import lib/wasmrt
+import wasmrt
 
 # Simple function that can be called from JS
 # Note the `exportwasm` pragma

@@ -11,4 +11,4 @@ bin           = @["nim_wasm_template"]
 # Dependencies
 
 requires "nim >= 1.6.10"
-
+requires "https://github.com/ItsMeBrianD/wasmrt >= 0.1.0"
