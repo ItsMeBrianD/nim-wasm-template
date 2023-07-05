@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script type="module">
+      import("/output.js").then(({ load }) =>
+        // Fetch the WASM module and compile it (async).
+        load().then((nim) => {
+          // Call the function that we exported
+          for (let i = 0; i < 10; i++) {
+            const p = document.createElement("p");
+            p.textContent = `${i} -> ${nim.exports.fibonacci(i)}`;
+            document.body.appendChild(p);
+          }
+        })
+      );
+    </script>
+  </head>
+</html>
